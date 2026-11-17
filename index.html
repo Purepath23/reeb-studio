@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>REEB Studio – Software Development &amp; AI Solutions</title>
+<meta name="description" content="REEB Studio builds software and AI-powered tools. First app: Pump Up the Volume!, a one-tap Bluetooth volume booster for Android.">
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+:root{--bg:#0B0C13;--surface:#151722;--line:#2A2E40;--text:#F3F6FB;--dim:#9AA1B5;--acc:#D4FA21;--ink:#0B0C13}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--acc)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{padding:26px 0 0;display:flex;align-items:center;gap:14px}
+header a.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text)}
+header img{width:46px;height:46px;border-radius:12px;display:block}
+.brand b{display:block;font-size:20px;letter-spacing:.02em;line-height:1.2;color:var(--text)}
+.brand span{display:block;color:var(--dim);font-size:13px;line-height:1.3}
+.hero{margin:26px 0 0;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
+.hero img{display:block;width:100%;height:auto}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.1;margin:34px 0 10px;letter-spacing:-.01em}
+h1 em{color:var(--acc);font-style:normal}
+.lead{font-size:18px;color:var(--dim);max-width:640px;margin:0 0 24px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:0}
+.btn{display:inline-block;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none}
+.btn.primary{background:var(--acc);color:var(--ink)}
+.btn.soon{background:var(--surface);color:var(--dim);border:1px dashed var(--line)}
+section{padding:48px 0 0}
+h2{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--acc);margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--dim)}
+.steps{list-style:none;counter-reset:s;padding:0;margin:18px 0 22px;display:grid;gap:12px}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px 16px 60px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--ink);font-weight:800;display:flex;align-items:center;justify-content:center}
+.note{color:var(--dim);font-size:15px;margin:0 0 20px;max-width:640px}
+footer{margin-top:64px;border-top:1px solid var(--line);padding:24px 0 44px;color:var(--dim);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 22px}
+footer a{color:var(--dim)}
+article h1{margin-top:34px}
+article h2{margin:30px 0 8px;padding-top:20px;border-top:1px solid var(--line);font-size:13px}
+article p,article li{color:var(--text)}
+article ul{padding-left:22px}
+article li{margin:6px 0}
+article em{color:var(--dim)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><a class="brand" href="./"><img src="icon.png" alt="" width="46" height="46"><span><b>REEB Studio</b><span>Software Development &amp; AI Solutions</span></span></a></header>
+
+<div class="hero"><img src="hero.jpg" width="1024" height="500" alt="Pump up the volume: Bluetooth headphone booster"></div>
+
+<h1>Pump Up the <em>Volume!</em></h1>
+<p class="lead">A one-tap volume booster for Bluetooth earbuds and headphones on Android. Turn it on, drag the slider, get more volume. No ads, no accounts.</p>
+<p class="cta"><span class="btn soon">Coming soon on Google Play</span><a class="btn primary" href="#testers">Help us test it</a></p>
+
+<section>
+<h2>What it does</h2>
+<div class="grid">
+<div class="card"><h3>One tap</h3><p>One big button turns the boost on or off, one slider chooses how much louder. Changes apply instantly while you listen.</p></div>
+<div class="card"><h3>Live level meter</h3><p>A digital LED meter follows your music and visibly jumps up when the boost is on. It is optional and never records audio.</p></div>
+<div class="card"><h3>Simple pricing</h3><p>Free for 3 days, then one payment unlocks it for good. No subscription, no ads, no tracking.</p></div>
+</div>
+</section>
+
+<section id="testers">
+<h2>Help us test</h2>
+<p class="note">We are running a 14-day closed test on Google Play before the public launch. You need an Android phone (Android 10 or later) and a Gmail address. It takes two minutes.</p>
+<ol class="steps">
+<li>Email us your Gmail address with the button below.</li>
+<li>We send you an invitation link. Open it on your phone, tap &ldquo;Become a tester&rdquo; and install the app from Google Play, like any other app: there is no file to download.</li>
+<li>Keep the app installed for 14 days and open it now and then. That is all.</li>
+</ol>
+<p class="cta"><a class="btn primary" href="mailto:purepathmusic@gmail.com?subject=Pump%20Up%20the%20Volume!%20tester&body=My%20Gmail%20address%20is%3A%20">Email us your Gmail</a></p>
+</section>
+
+<section>
+<h2>About REEB Studio</h2>
+<p class="note">REEB Studio &ndash; Software Development &amp; AI Solutions. We build software and AI-powered tools. Pump Up the Volume! is our first app.</p>
+</section>
+<footer><span>&copy; 2026 REEB Studio</span><a href="privacy.html">Privacy Policy</a><a href="mailto:purepathmusic@gmail.com">purepathmusic@gmail.com</a></footer>
+</div>
+</body>
+</html>
