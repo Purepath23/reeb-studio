@@ -1,87 +1,595 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>REEB Studio – Software Development &amp; AI Solutions</title>
-<meta name="description" content="REEB Studio builds software and AI-powered tools. First app: Pump Up the Volume!, a one-tap Bluetooth volume booster for Android.">
-<link rel="icon" type="image/png" href="icon.png">
-<style>
-:root{--bg:#0B0C13;--surface:#151722;--line:#2A2E40;--text:#F3F6FB;--dim:#9AA1B5;--acc:#D4FA21;--ink:#0B0C13}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--acc)}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{padding:26px 0 0;display:flex;align-items:center;gap:14px}
-header a.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--text)}
-header img{width:46px;height:46px;border-radius:12px;display:block}
-.brand b{display:block;font-size:20px;letter-spacing:.02em;line-height:1.2;color:var(--text)}
-.brand span{display:block;color:var(--dim);font-size:13px;line-height:1.3}
-.hero{margin:26px 0 0;border-radius:24px;overflow:hidden;border:1px solid var(--line)}
-.hero img{display:block;width:100%;height:auto}
-h1{font-size:clamp(28px,5vw,40px);line-height:1.1;margin:34px 0 10px;letter-spacing:-.01em}
-h1 em{color:var(--acc);font-style:normal}
-.lead{font-size:18px;color:var(--dim);max-width:640px;margin:0 0 24px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:0}
-.btn{display:inline-block;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none}
-.btn.primary{background:var(--acc);color:var(--ink)}
-.btn.soon{background:var(--surface);color:var(--dim);border:1px dashed var(--line)}
-section{padding:48px 0 0}
-h2{font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:var(--acc);margin:0 0 16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px}
-.card h3{margin:0 0 6px;font-size:18px}
-.card p{margin:0;color:var(--dim)}
-.steps{list-style:none;counter-reset:s;padding:0;margin:18px 0 22px;display:grid;gap:12px}
-.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px 16px 60px;position:relative}
-.steps li:before{content:counter(s);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--ink);font-weight:800;display:flex;align-items:center;justify-content:center}
-.note{color:var(--dim);font-size:15px;margin:0 0 20px;max-width:640px}
-footer{margin-top:64px;border-top:1px solid var(--line);padding:24px 0 44px;color:var(--dim);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 22px}
-footer a{color:var(--dim)}
-article h1{margin-top:34px}
-article h2{margin:30px 0 8px;padding-top:20px;border-top:1px solid var(--line);font-size:13px}
-article p,article li{color:var(--text)}
-article ul{padding-left:22px}
-article li{margin:6px 0}
-article em{color:var(--dim)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REEB STUDIO — Soluzioni di intelligenza artificiale per le aziende</title>
+  <meta name="description" content="REEB STUDIO è una società che progetta soluzioni di intelligenza artificiale per le aziende: automazione dei processi, ottimizzazione dei flussi di lavoro, assistenti AI, integrazioni, software e app su misura.">
+  <meta name="theme-color" content="#0c1b16">
+  <link rel="canonical" href="https://reebstudio.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="REEB STUDIO">
+  <meta property="og:title" content="REEB STUDIO — Soluzioni di intelligenza artificiale per le aziende">
+  <meta property="og:description" content="Automatizziamo le attività ripetitive, ottimizziamo i flussi di lavoro e integriamo l’intelligenza artificiale nei sistemi che la tua azienda usa già.">
+  <meta property="og:url" content="https://reebstudio.com/">
+  <meta property="og:image" content="https://reebstudio.com/assets/img/og-reeb-studio.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "REEB STUDIO",
+    "url": "https://reebstudio.com/",
+    "logo": "https://reebstudio.com/assets/brand/icon-512.png",
+    "description": "Società che progetta e sviluppa soluzioni di intelligenza artificiale per le aziende: automazione dei processi, ottimizzazione dei flussi di lavoro, assistenti AI, integrazioni, software e app per Android e iPhone.",
+    "email": "info@reebstudio.com",
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": { "@type": "SoftwareApplication", "name": "Phonetic AI", "applicationCategory": "BusinessApplication", "url": "https://reebstudio.com/phonetic-ai/" }
+    }
+  }
+  </script>
 </head>
 <body>
-<div class="wrap">
-<header><a class="brand" href="./"><img src="icon.png" alt="" width="46" height="46"><span><b>REEB Studio</b><span>Software Development &amp; AI Solutions</span></span></a></header>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.8 2.8 5.4-5.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.5c.6 4.4 2.3 6.1 6.5 6.7-4.2.6-5.9 2.3-6.5 6.7-.6-4.4-2.3-6.1-6.5-6.7 4.2-.6 5.9-2.3 6.5-6.7z"/><path d="M18.5 15.5c.2 1.6.9 2.3 2.5 2.5-1.6.2-2.3.9-2.5 2.5-.2-1.6-.9-2.3-2.5-2.5 1.6-.2 2.3-.9 2.5-2.5z"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .8 3.2 2.5 3.5 5.2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 3.5H5a1.5 1.5 0 0 0-1.5 1.6c.7 8.2 7.2 14.7 15.4 15.4a1.5 1.5 0 0 0 1.6-1.5v-2.2a1.5 1.5 0 0 0-1.1-1.4l-3-.9a1.5 1.5 0 0 0-1.5.4l-1.1 1.1a12 12 0 0 1-5.8-5.8L9 9.1a1.5 1.5 0 0 0 .4-1.5l-.9-3a1.5 1.5 0 0 0-1.3-1.1z"/></symbol>
+    <symbol id="i-workflow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><path d="M10 6.5h4.5a3 3 0 0 1 3 3V14"/><path d="M6.5 10v4.5a3 3 0 0 0 3 3H14"/></symbol>
+    <symbol id="i-assistant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.3 7.6L3.5 20.5l1.1-4.3A8.5 8.5 0 1 1 20.5 12z"/><path d="M12 8c.3 2 1.1 2.8 3 3-1.9.3-2.7 1.1-3 3-.3-1.9-1.1-2.7-3-3 1.9-.2 2.7-1 3-3z"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5"/><path d="M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v4"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7.5L3.5 12 8 16.5M16 7.5l4.5 4.5-4.5 4.5M13.5 5l-3 14"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-analysis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="M20.5 20.5l-4-4"/><path d="M8 13.5v-2M11 13.5V8.5M14 13.5v-3.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c.8-4 3.7-6.5 7.5-6.5s6.7 2.5 7.5 6.5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9.5h18M9.5 9.5V21"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 10.5v3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M8 15.5l3.5-4 3 2.5L20 8"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2.5-7.5A2 2 0 0 1 7.4 4h9.2a2 2 0 0 1 1.9 1.5L21 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 13h5l1.5 2.5h5L16 13h5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12l15-7.5-5.5 15-2.5-5.5z"/><path d="M11.5 14l8-9.5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v18M4.5 3v5a2.5 2.5 0 0 0 5 0V3"/><path d="M17 21V3c-2.2 1.2-3.5 3.6-3.5 7v3.5H17"/></symbol>
+    <symbol id="i-forward" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-7 7"/><path d="M9.2 4.5H5.5A1.5 1.5 0 0 0 4 6.1c.7 7.6 6.3 13.2 13.9 13.9a1.5 1.5 0 0 0 1.6-1.5v-2.2a1.5 1.5 0 0 0-1.1-1.4l-2.6-.8a1.5 1.5 0 0 0-1.5.4l-.9.9a11 11 0 0 1-4.9-4.9l.9-.9a1.5 1.5 0 0 0 .4-1.5z"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 4.3L2.8 17.5A2 2 0 0 0 4.5 20.5h15a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4.5M12 17.2v.3"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18M6.5 6.3v0M9 6.3v0"/></symbol>
+  </defs>
+</svg>
 
-<div class="hero"><img src="hero.jpg" width="1024" height="500" alt="Pump up the volume: Bluetooth headphone booster"></div>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-<h1>Pump Up the <em>Volume!</em></h1>
-<p class="lead">A one-tap volume booster for Bluetooth earbuds and headphones on Android. Turn it on, drag the slider, get more volume. No ads, no accounts.</p>
-<p class="cta"><span class="btn soon">Coming soon on Google Play</span><a class="btn primary" href="#testers">Help us test it</a></p>
+  <header class="site-header" id="top">
+    <div class="container header-bar">
+      <a class="brand" href="./" aria-label="REEB STUDIO, torna alla home">
+        <img class="brand-mark" src="assets/brand/mark.svg" width="36" height="36" alt="">
+        <span class="brand-name">REEB <span>STUDIO</span></span>
+      </a>
+      <nav class="nav" aria-label="Menu principale">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+          <span></span><span class="sr-only">Apri il menu</span>
+        </button>
+        <div class="nav-panel" id="nav-panel">
+          <ul class="nav-links" role="list">
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#soluzioni">Soluzioni</a></li>
+            <li><a href="#metodo">Metodo</a></li>
+            <li><a href="phonetic-ai/">Phonetic AI</a></li>
+            <li><a href="#app">App</a></li>
+          </ul>
+          <a class="btn btn-gold btn-sm nav-cta" href="#contatti">Parliamo del progetto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<section>
-<h2>What it does</h2>
-<div class="grid">
-<div class="card"><h3>One tap</h3><p>One big button turns the boost on or off, one slider chooses how much louder. Changes apply instantly while you listen.</p></div>
-<div class="card"><h3>Live level meter</h3><p>A digital LED meter follows your music and visibly jumps up when the boost is on. It is optional and never records audio.</p></div>
-<div class="card"><h3>Simple pricing</h3><p>Free for 3 days, then one payment unlocks it for good. No subscription, no ads, no tracking.</p></div>
-</div>
-</section>
+  <main id="contenuto">
 
-<section id="testers">
-<h2>Help us test</h2>
-<p class="note">We are running a 14-day closed test on Google Play before the public launch. You need an Android phone (Android 10 or later) and a Gmail address. It takes two minutes.</p>
-<ol class="steps">
-<li>Email us your Gmail address with the button below.</li>
-<li>We send you an invitation link. Open it on your phone, tap &ldquo;Become a tester&rdquo; and install the app from Google Play, like any other app: there is no file to download.</li>
-<li>Keep the app installed for 14 days and open it now and then. That is all.</li>
-</ol>
-<p class="cta"><a class="btn primary" href="mailto:purepathmusic@gmail.com?subject=Pump%20Up%20the%20Volume!%20tester&body=My%20Gmail%20address%20is%3A%20">Email us your Gmail</a></p>
-</section>
+    <!-- ============ Hero ============ -->
+    <section class="hero dark grain" aria-labelledby="hero-title">
+      <div class="grid-lines" aria-hidden="true"></div>
+      <img class="hero-ribbon" src="assets/img/ribbon.webp" width="1536" height="1024" alt="" fetchpriority="high">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="pill"><b>AI</b> Soluzioni su misura per le imprese</p>
+          <h1 id="hero-title">Soluzioni AI che fanno <span class="accent">lavorare meglio</span> la tua azienda.</h1>
+          <p class="lead">REEB STUDIO è una società che progetta e sviluppa soluzioni di intelligenza artificiale per le aziende. Risolviamo problemi operativi, automatizziamo le attività ripetitive e ottimizziamo i flussi di lavoro, integrandoci con gli strumenti che usi già.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="#contatti">Prenota una consulenza <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="phonetic-ai/">Scopri Phonetic AI</a>
+          </div>
+          <ul class="hero-points" role="list">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Soluzioni su misura</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Integrazione con i software esistenti</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Web, Android e iPhone</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-<section>
-<h2>About REEB Studio</h2>
-<p class="note">REEB Studio &ndash; Software Development &amp; AI Solutions. We build software and AI-powered tools. Pump Up the Volume! is our first app.</p>
-</section>
-<footer><span>&copy; 2026 REEB Studio</span><a href="privacy.html">Privacy Policy</a><a href="mailto:purepathmusic@gmail.com">purepathmusic@gmail.com</a></footer>
-</div>
+    <!-- ============ Dichiarazione ============ -->
+    <section class="section-tight" aria-label="Il nostro approccio">
+      <div class="container intro-grid">
+        <div>
+        <p class="chores-intro">In ogni azienda ci sono ore di lavoro che se ne vanno in attività ripetitive:</p>
+        <ul class="chores reveal" role="list">
+          <li><span class="chore-check" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span class="chore-row"><span class="chore">Rispondere alle stesse domande</span></span></li>
+          <li><span class="chore-check" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span class="chore-row"><span class="chore">Copiare dati tra programmi</span></span></li>
+          <li><span class="chore-check" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span class="chore-row"><span class="chore">Smistare email e richieste</span></span></li>
+          <li><span class="chore-check" aria-hidden="true"><svg><use href="#i-check"/></svg></span><span class="chore-row"><span class="chore">Compilare documenti</span></span></li>
+        </ul>
+        <p class="chores-outro">Noi le trasformiamo in <strong>processi automatici, affidabili e misurabili</strong>, così le persone possono dedicarsi al lavoro che crea valore.</p>
+        <ul class="sectors reveal" role="list" aria-label="Settori">
+          <li>PMI e grandi imprese</li>
+          <li>Ristorazione e ospitalità</li>
+          <li>Commercio e retail</li>
+          <li>Studi professionali</li>
+          <li>Servizi e logistica</li>
+          <li>Produzione e artigianato</li>
+        </ul>
+        </div>
+        <div class="flow-wrap reveal">
+          <figure class="flow" aria-label="Esempio: una richiesta di un cliente gestita in automatico">
+            <div class="flow-head">
+              <p class="flow-title">Richieste clienti <small>Flusso automatico · esempio</small></p>
+              <span class="status">Attivo</span>
+            </div>
+            <ol class="flow-steps" role="list">
+              <li class="flow-step is-done">
+                <span class="flow-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+                <div><strong>Nuova email</strong><span>Richiesta di preventivo da Bianchi Srl</span></div>
+                <time>09:14</time>
+              </li>
+              <li class="flow-step is-done">
+                <span class="flow-icon"><svg aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+                <div><strong>Analisi AI</strong><span>Tipo: preventivo · Priorità alta · Dati estratti</span></div>
+                <time>09:14</time>
+              </li>
+              <li class="flow-step is-done">
+                <span class="flow-icon"><svg aria-hidden="true"><use href="#i-database"/></svg></span>
+                <div><strong>Gestionale aggiornato</strong><span>Scheda cliente e opportunità create</span></div>
+                <time>09:14</time>
+              </li>
+              <li class="flow-step is-done">
+                <span class="flow-icon"><svg aria-hidden="true"><use href="#i-users"/></svg></span>
+                <div><strong>Team avvisato</strong><span>Assegnata all’ufficio commerciale</span></div>
+                <time>09:15</time>
+              </li>
+            </ol>
+            <p class="flow-foot"><svg aria-hidden="true"><use href="#i-check-circle"/></svg>Nessun dato copiato a mano, nessuna richiesta persa.</p>
+          </figure>
+          <div class="flow-tag" aria-hidden="true">
+            <svg><use href="#i-workflow"/></svg>
+            <div><b>Workflow ottimizzato</b><span>4 passaggi, zero attese</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Servizi ============ -->
+    <section class="section pt-0" id="servizi" aria-labelledby="servizi-title">
+      <div class="container">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="eyebrow">Servizi</p>
+            <h2 id="servizi-title">Dall’analisi del problema al software <span class="accent">in produzione</span>.</h2>
+          </div>
+          <p class="lead">Ci occupiamo di tutto il percorso: capiamo dove l’intelligenza artificiale porta un vantaggio reale, progettiamo la soluzione, la sviluppiamo e la seguiamo nel tempo.</p>
+        </div>
+
+        <ul class="services" role="list">
+          <li class="service reveal">
+            <div class="service-top"><span class="icon-box"><svg aria-hidden="true"><use href="#i-analysis"/></svg></span><span class="service-num">01</span></div>
+            <h3>Analisi e consulenza AI</h3>
+            <p>Mappiamo i processi della tua azienda, individuiamo dove l’AI fa davvero la differenza e definiamo le priorità con un piano chiaro di costi e benefici.</p>
+          </li>
+          <li class="service reveal" style="--d:.06s">
+            <div class="service-top"><span class="icon-box"><svg aria-hidden="true"><use href="#i-workflow"/></svg></span><span class="service-num">02</span></div>
+            <h3>Automazione dei processi</h3>
+            <p>Inserimento dati, smistamento delle email, gestione di documenti e moduli: le attività ripetitive diventano automatiche e tracciabili.</p>
+          </li>
+          <li class="service reveal" style="--d:.12s">
+            <div class="service-top"><span class="icon-box"><svg aria-hidden="true"><use href="#i-sliders"/></svg></span><span class="service-num">03</span></div>
+            <h3>Ottimizzazione dei flussi di lavoro</h3>
+            <p>Ridisegniamo i workflow eliminando passaggi inutili, attese e colli di bottiglia tra reparti, persone e strumenti.</p>
+          </li>
+          <li class="service reveal">
+            <div class="service-top"><span class="icon-box"><svg aria-hidden="true"><use href="#i-assistant"/></svg></span><span class="service-num">04</span></div>
+            <h3>Assistenti e agenti AI</h3>
+            <p>Assistenti vocali e chat che rispondono a clienti e collaboratori a qualsiasi ora, usando le informazioni e le regole della tua azienda.</p>
+          </li>
+          <li class="service reveal" style="--d:.06s">
+            <div class="service-top"><span class="icon-box"><svg aria-hidden="true"><use href="#i-plug"/></svg></span><span class="service-num">05</span></div>
+            <h3>Integrazioni e dati</h3>
+            <p>Colleghiamo gestionali, CRM, e-commerce e fogli di calcolo: i dati si inseriscono una volta sola e restano allineati ovunque.</p>
+          </li>
+          <li class="service reveal" style="--d:.12s">
+            <div class="service-top"><span class="icon-box"><svg aria-hidden="true"><use href="#i-code"/></svg></span><span class="service-num">06</span></div>
+            <h3>Software e app su misura</h3>
+            <p>Piattaforme web, gestionali e applicazioni per Android e iPhone, progettati intorno al tuo modo di lavorare.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Problemi e soluzioni ============ -->
+    <section class="section dark grain" id="soluzioni" aria-labelledby="soluzioni-title">
+      <div class="container problems-grid">
+        <div class="problems-intro">
+          <p class="eyebrow">Soluzioni</p>
+          <h2 id="soluzioni-title">Problemi concreti, <span class="accent">soluzioni concrete</span>.</h2>
+          <p class="lead">Non vendiamo tecnologia fine a se stessa. Partiamo da ciò che oggi rallenta la tua azienda e costruiamo la soluzione più semplice ed efficace per risolverlo.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="#contatti">Raccontaci il tuo problema <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+
+        <ul class="problem-list" role="list">
+          <li class="problem reveal">
+            <blockquote>«Il telefono squilla mentre siamo tutti impegnati.»</blockquote>
+            <div class="problem-solution">
+              <p class="tag"><svg aria-hidden="true"><use href="#i-phone"/></svg>Assistente vocale</p>
+              <p>Un assistente vocale AI risponde, capisce la richiesta e la registra nel gestionale, anche fuori orario.</p>
+            </div>
+          </li>
+          <li class="problem reveal">
+            <blockquote>«Copiamo gli stessi dati in tre programmi diversi.»</blockquote>
+            <div class="problem-solution">
+              <p class="tag"><svg aria-hidden="true"><use href="#i-plug"/></svg>Integrazioni</p>
+              <p>Colleghiamo i software che usate già: i dati si inseriscono una volta e si aggiornano ovunque.</p>
+            </div>
+          </li>
+          <li class="problem reveal">
+            <blockquote>«Le richieste dei clienti si perdono tra email e messaggi.»</blockquote>
+            <div class="problem-solution">
+              <p class="tag"><svg aria-hidden="true"><use href="#i-inbox"/></svg>Automazione</p>
+              <p>L’AI legge, classifica e smista ogni richiesta alla persona giusta, con priorità e scadenze.</p>
+            </div>
+          </li>
+          <li class="problem reveal">
+            <blockquote>«Preparare preventivi e documenti richiede ore.»</blockquote>
+            <div class="problem-solution">
+              <p class="tag"><svg aria-hidden="true"><use href="#i-file"/></svg>Documenti</p>
+              <p>Generiamo bozze di preventivi, report e documenti a partire dai vostri dati e modelli, pronte da verificare e inviare.</p>
+            </div>
+          </li>
+          <li class="problem reveal">
+            <blockquote>«Il team risponde sempre alle stesse domande.»</blockquote>
+            <div class="problem-solution">
+              <p class="tag"><svg aria-hidden="true"><use href="#i-assistant"/></svg>Assistente interno</p>
+              <p>Un assistente basato sulle vostre procedure e sui vostri documenti risponde ai colleghi in pochi secondi.</p>
+            </div>
+          </li>
+          <li class="problem reveal">
+            <blockquote>«Abbiamo i dati, ma nessuno ha il tempo di analizzarli.»</blockquote>
+            <div class="problem-solution">
+              <p class="tag"><svg aria-hidden="true"><use href="#i-chart"/></svg>Analisi dei dati</p>
+              <p>Report e cruscotti automatici trasformano i dati in indicatori chiari, sempre aggiornati.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Prodotto: Phonetic AI ============ -->
+    <section class="section" id="prodotti" aria-labelledby="prodotti-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Prodotti</p>
+          <h2 id="prodotti-title">Un problema reale, <span class="accent">un prodotto</span> pronto all’uso.</h2>
+        </div>
+
+        <article class="product-feature dark reveal" aria-labelledby="phonetic-title">
+          <div>
+            <p class="product-logo"><span class="wave"><svg aria-hidden="true"><use href="#i-wave"/></svg></span>Phonetic <em>AI</em></p>
+            <h3 class="h2" id="phonetic-title">Il centralino AI che prende le prenotazioni del tuo ristorante.</h3>
+            <p class="lead">Il primo software sviluppato da REEB STUDIO. Risponde al telefono a qualsiasi ora, controlla i tavoli liberi e salva la prenotazione nel gestionale di sala, in italiano e nella lingua dei tuoi clienti.</p>
+            <ul class="check-list" role="list">
+              <li><svg aria-hidden="true"><use href="#i-check-circle"/></svg><div>Risponde 24 ore su 24 <span>— anche durante il servizio e a locale chiuso</span></div></li>
+              <li><svg aria-hidden="true"><use href="#i-check-circle"/></svg><div>Conferma solo se c’è posto <span>— verifica la sala prima di prenotare</span></div></li>
+              <li><svg aria-hidden="true"><use href="#i-check-circle"/></svg><div>Multilingue <span>— i turisti prenotano nella loro lingua</span></div></li>
+              <li><svg aria-hidden="true"><use href="#i-check-circle"/></svg><div>Piantina di sala intelligente <span>— assegna i tavoli e unisce le tavolate</span></div></li>
+            </ul>
+            <div class="actions">
+              <a class="btn btn-gold" href="phonetic-ai/">Scopri Phonetic AI <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+              <a class="btn btn-ghost" href="tel:+3905831706764"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama la demo</a>
+            </div>
+          </div>
+
+          <figure class="screen">
+            <div class="screen-frame">
+              <div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i><span>Phonetic AI · Gestionale di sala</span></div>
+              <img src="assets/img/phonetic-gestionale.webp" width="1684" height="1264" alt="Il gestionale di Phonetic AI: la piantina della sala con i tavoli liberi e quelli prenotati, con nome, coperti e orario." loading="lazy">
+            </div>
+            <div class="call-chip" aria-hidden="true">
+              <span class="flow-icon"><svg><use href="#i-phone"/></svg></span>
+              <div><b>Chiamata gestita · 01:12</b><span>Sabato 20:30 · 6 persone</span><br><span class="ok">✓ Prenotazione salvata</span></div>
+            </div>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ Metodo ============ -->
+    <section class="section bg-paper-2" id="metodo" aria-labelledby="metodo-title">
+      <div class="container">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="eyebrow">Metodo</p>
+            <h2 id="metodo-title">Un percorso chiaro, <span class="accent">dal primo incontro</span> ai risultati.</h2>
+          </div>
+          <p class="lead">Lavoriamo per fasi, con obiettivi condivisi e verificabili. Sai sempre cosa stiamo facendo, perché e con quali risultati.</p>
+        </div>
+        <ol class="steps" role="list">
+          <li class="step reveal">
+            <h3>Ascolto e analisi</h3>
+            <p>Incontriamo il tuo team, osserviamo i processi e individuiamo le attività che costano più tempo e denaro.</p>
+          </li>
+          <li class="step reveal" style="--d:.08s">
+            <h3>Proposta chiara</h3>
+            <p>Ti presentiamo la soluzione con obiettivi, tempi e costi definiti, prima di iniziare lo sviluppo.</p>
+          </li>
+          <li class="step reveal" style="--d:.16s">
+            <h3>Sviluppo e test</h3>
+            <p>Realizziamo la soluzione per fasi e la verifichiamo con i tuoi dati e le tue persone prima di metterla in produzione.</p>
+          </li>
+          <li class="step reveal" style="--d:.24s">
+            <h3>Avvio e assistenza</h3>
+            <p>Formiamo il team, monitoriamo i risultati e miglioriamo la soluzione nel tempo, insieme a te.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Principi ============ -->
+    <section class="section" aria-labelledby="principi-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Perché REEB STUDIO</p>
+          <h2 id="principi-title">Tecnologia avanzata, <span class="accent">approccio concreto</span>.</h2>
+        </div>
+        <ul class="principles" role="list">
+          <li class="principle reveal">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-target"/></svg></span>
+            <div><h3>Prima il problema, poi la tecnologia</h3><p>Usiamo l’intelligenza artificiale solo dove porta un vantaggio misurabile. Se basta una soluzione più semplice, te lo diciamo.</p></div>
+          </li>
+          <li class="principle reveal" style="--d:.06s">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-sliders"/></svg></span>
+            <div><h3>Su misura, non preconfezionato</h3><p>Ogni soluzione si adatta ai tuoi strumenti, alle tue regole e alle abitudini del tuo team, non il contrario.</p></div>
+          </li>
+          <li class="principle reveal">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <div><h3>Dati protetti</h3><p>Progettiamo nel rispetto del GDPR e usiamo i dati della tua azienda solo per gli scopi concordati.</p></div>
+          </li>
+          <li class="principle reveal" style="--d:.06s">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-user"/></svg></span>
+            <div><h3>Un unico interlocutore</h3><p>Dall’analisi allo sviluppo, fino all’assistenza: un solo team che conosce il tuo progetto dall’inizio.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ App mobile ============ -->
+    <section class="section dark deep grain" id="app" aria-labelledby="app-title">
+      <div class="container apps">
+        <div>
+          <p class="eyebrow">App mobile</p>
+          <h2 id="app-title">App per Android e iPhone, con <span class="accent">l’intelligenza artificiale</span>.</h2>
+          <p class="lead">Sviluppiamo applicazioni mobili per i tuoi clienti e per il tuo team: prenotazioni, ordini, aree riservate e strumenti per chi lavora fuori sede, con assistenti AI integrati.</p>
+          <ul class="platforms" role="list">
+            <li><svg aria-hidden="true"><use href="#i-smartphone"/></svg>Android</li>
+            <li><svg aria-hidden="true"><use href="#i-smartphone"/></svg>iPhone</li>
+            <li><svg aria-hidden="true"><use href="#i-web"/></svg>Web app</li>
+          </ul>
+          <ul class="feature-mini" role="list">
+            <li><b>Per i tuoi clienti</b><span>Prenotazioni, ordini, fidelizzazione e assistenza in un’unica app.</span></li>
+            <li><b>Per il tuo team</b><span>Agenda, rapportini, consegne e documenti sempre a portata di mano.</span></li>
+            <li><b>Assistente AI integrato</b><span>Risposte immediate su ordini, clienti e procedure, anche a voce.</span></li>
+            <li><b>Collegata ai tuoi sistemi</b><span>Dati sincronizzati con gestionale, CRM ed e-commerce.</span></li>
+          </ul>
+        </div>
+
+        <div class="phone-stage reveal" aria-hidden="true">
+          <div class="phone">
+            <div class="phone-screen">
+              <span class="phone-notch"></span>
+              <div class="phone-top"><small>Assistente aziendale</small><b>Buongiorno, Marco</b></div>
+              <div class="phone-chat">
+                <p class="bubble me">Quali consegne ho domani?</p>
+                <div class="bubble ai"><b>Assistente</b>Domani hai 3 consegne:
+                  <ul class="bubble-list">
+                    <li>Rossi Srl <span>09:30</span></li>
+                    <li>Bar Centrale <span>11:00</span></li>
+                    <li>Ferri &amp; C. <span>15:15</span></li>
+                  </ul>
+                </div>
+                <p class="bubble me">Avvisa il Bar Centrale che arrivo alle 11:30</p>
+                <p class="bubble ai"><b>Assistente</b>Fatto: ho avvisato il cliente e aggiornato l’agenda.</p>
+              </div>
+              <div class="phone-input">Scrivi o parla…<i><svg><use href="#i-mic"/></svg></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Domande ============ -->
+    <section class="section" id="domande" aria-labelledby="domande-title">
+      <div class="container faq-grid">
+        <div>
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="domande-title">Prima di iniziare.</h2>
+          <p class="lead">Le domande che ci fanno più spesso le aziende. Per tutto il resto, <a href="#contatti">scrivici</a>.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>La mia azienda è troppo piccola per l’intelligenza artificiale?</summary>
+            <p>No. Molte delle soluzioni più utili sono pensate proprio per le piccole e medie imprese: si parte da un problema specifico, con un investimento proporzionato ai risultati attesi.</p>
+          </details>
+          <details>
+            <summary>Devo cambiare i programmi che uso già?</summary>
+            <p>Di solito no. Quando è possibile ci integriamo con i software che già utilizzi, così il tuo team non deve cambiare abitudini.</p>
+          </details>
+          <details>
+            <summary>Quanto costa un progetto?</summary>
+            <p>Dipende dalla complessità. Dopo il primo incontro di analisi ti inviamo una proposta scritta con costi e tempi definiti.</p>
+          </details>
+          <details>
+            <summary>In quanto tempo si vedono i primi risultati?</summary>
+            <p>Lavoriamo per fasi: mettiamo in funzione per prima la parte che porta il beneficio maggiore, poi estendiamo la soluzione.</p>
+          </details>
+          <details>
+            <summary>Come vengono trattati i dati della mia azienda?</summary>
+            <p>Li usiamo solo per realizzare il progetto concordato, nel rispetto del GDPR. Ti spieghiamo sempre dove vengono elaborati e con quali strumenti.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contatti ============ -->
+    <section class="section dark grain" id="contatti" aria-labelledby="contatti-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contatti</p>
+          <h2 id="contatti-title">Raccontaci il problema. <span class="accent">Troviamo la soluzione</span> insieme.</h2>
+          <p class="lead">Descrivi in poche righe la tua azienda e cosa vorresti migliorare. Ti ricontattiamo per fissare un primo incontro di analisi.</p>
+          <ul class="contact-direct" role="list">
+            <li>
+              <span class="flow-icon"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <div><small>Email</small><a href="mailto:info@reebstudio.com">info@reebstudio.com</a></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <form id="contact-form" data-email="info@reebstudio.com" data-endpoint="" novalidate>
+            <div class="form-grid">
+              <div class="field">
+                <label for="cf-nome">Nome e cognome</label>
+                <input id="cf-nome" name="nome" type="text" autocomplete="name" required aria-describedby="cf-nome-err">
+                <p class="field-error" id="cf-nome-err"></p>
+              </div>
+              <div class="field">
+                <label for="cf-azienda">Azienda <small>(facoltativo)</small></label>
+                <input id="cf-azienda" name="azienda" type="text" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err">
+                <p class="field-error" id="cf-email-err"></p>
+              </div>
+              <div class="field">
+                <label for="cf-tel">Telefono <small>(facoltativo)</small></label>
+                <input id="cf-tel" name="telefono" type="tel" autocomplete="tel">
+              </div>
+              <div class="field field-full">
+                <label for="cf-tema">Di cosa hai bisogno?</label>
+                <select id="cf-tema" name="tema">
+                  <option value="Automazione dei processi">Automazione dei processi</option>
+                  <option value="Ottimizzazione dei flussi di lavoro">Ottimizzazione dei flussi di lavoro</option>
+                  <option value="Assistente o agente AI">Assistente o agente AI</option>
+                  <option value="Integrazioni tra software">Integrazioni tra software</option>
+                  <option value="Software o app su misura">Software o app su misura</option>
+                  <option value="Phonetic AI">Phonetic AI per il mio ristorante</option>
+                  <option value="Altro">Altro</option>
+                </select>
+              </div>
+              <div class="field field-full">
+                <label for="cf-messaggio">Messaggio</label>
+                <textarea id="cf-messaggio" name="messaggio" required aria-describedby="cf-messaggio-err" placeholder="Es. Riceviamo molte richieste via email e perdiamo tempo a smistarle…"></textarea>
+                <p class="field-error" id="cf-messaggio-err"></p>
+              </div>
+              <div class="field field-full">
+                <label class="consent">
+                  <input type="checkbox" name="privacy" id="cf-privacy" required aria-describedby="cf-privacy-err">
+                  <span>Ho letto l’<a href="note-legali/#privacy">informativa sulla privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato.</span>
+                </label>
+                <p class="field-error" id="cf-privacy-err"></p>
+              </div>
+            </div>
+            <div class="form-actions">
+              <p class="form-note">Ti rispondiamo via email.</p>
+              <button class="btn btn-gold" type="submit">Invia la richiesta <svg aria-hidden="true"><use href="#i-send"/></svg></button>
+            </div>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="./" aria-label="REEB STUDIO, torna alla home">
+            <img class="brand-mark" src="assets/brand/mark.svg" width="36" height="36" alt="">
+            <span class="brand-name">REEB <span>STUDIO</span></span>
+          </a>
+          <p>Soluzioni di intelligenza artificiale per le aziende: automazione dei processi, assistenti AI, integrazioni, software e app su misura.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Società</h2>
+          <ul role="list">
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#soluzioni">Soluzioni</a></li>
+            <li><a href="#metodo">Metodo</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Prodotti</h2>
+          <ul role="list">
+            <li><a href="phonetic-ai/">Phonetic AI</a></li>
+            <li><a href="tel:+3905831706764">Demo telefonica</a></li>
+            <li><a href="#app">App mobile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Informazioni</h2>
+          <ul role="list">
+            <li><a href="mailto:info@reebstudio.com">info@reebstudio.com</a></li>
+            <li><a href="note-legali/#privacy">Privacy</a></li>
+            <li><a href="note-legali/#cookie">Cookie</a></li>
+            <li><a href="note-legali/#crediti">Crediti</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <!-- Quando la società sarà registrata, aggiungere qui: ragione sociale completa, sede legale, P.IVA (obbligatoria per legge sul sito). -->
+        <span>&copy; <span data-year>2026</span> REEB STUDIO. Tutti i diritti riservati.</span>
+        
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

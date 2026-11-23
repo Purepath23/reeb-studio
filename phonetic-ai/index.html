@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phonetic AI — Il centralino AI per ristoranti | REEB STUDIO</title>
+  <meta name="description" content="Phonetic AI risponde al telefono del tuo ristorante a qualsiasi ora, verifica i tavoli liberi e salva le prenotazioni nel gestionale di sala. Parla più lingue. Chiama la demo.">
+  <meta name="theme-color" content="#0c1b16">
+  <link rel="canonical" href="https://reebstudio.com/phonetic-ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="REEB STUDIO">
+  <meta property="og:title" content="Phonetic AI — Il centralino AI per ristoranti">
+  <meta property="og:description" content="Risponde al telefono del tuo ristorante, controlla i tavoli liberi e salva le prenotazioni nel gestionale di sala. Anche nella lingua dei tuoi clienti.">
+  <meta property="og:url" content="https://reebstudio.com/phonetic-ai/">
+  <meta property="og:image" content="https://reebstudio.com/assets/img/og-phonetic-ai.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Phonetic AI",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Centralino con intelligenza artificiale per ristoranti: risponde al telefono, verifica i tavoli liberi e salva le prenotazioni nel gestionale di sala.",
+    "url": "https://reebstudio.com/phonetic-ai/",
+    "publisher": { "@type": "Organization", "name": "REEB STUDIO", "url": "https://reebstudio.com/" }
+  }
+  </script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.8 2.8 5.4-5.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.5c.6 4.4 2.3 6.1 6.5 6.7-4.2.6-5.9 2.3-6.5 6.7-.6-4.4-2.3-6.1-6.5-6.7 4.2-.6 5.9-2.3 6.5-6.7z"/><path d="M18.5 15.5c.2 1.6.9 2.3 2.5 2.5-1.6.2-2.3.9-2.5 2.5-.2-1.6-.9-2.3-2.5-2.5 1.6-.2 2.3-.9 2.5-2.5z"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.8c2 .8 3.2 2.5 3.5 5.2"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 3.5H5a1.5 1.5 0 0 0-1.5 1.6c.7 8.2 7.2 14.7 15.4 15.4a1.5 1.5 0 0 0 1.6-1.5v-2.2a1.5 1.5 0 0 0-1.1-1.4l-3-.9a1.5 1.5 0 0 0-1.5.4l-1.1 1.1a12 12 0 0 1-5.8-5.8L9 9.1a1.5 1.5 0 0 0 .4-1.5l-.9-3a1.5 1.5 0 0 0-1.3-1.1z"/></symbol>
+    <symbol id="i-workflow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><path d="M10 6.5h4.5a3 3 0 0 1 3 3V14"/><path d="M6.5 10v4.5a3 3 0 0 0 3 3H14"/></symbol>
+    <symbol id="i-assistant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.3 7.6L3.5 20.5l1.1-4.3A8.5 8.5 0 1 1 20.5 12z"/><path d="M12 8c.3 2 1.1 2.8 3 3-1.9.3-2.7 1.1-3 3-.3-1.9-1.1-2.7-3-3 1.9-.2 2.7-1 3-3z"/></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v5M15 3v5"/><path d="M6 8h12v3a6 6 0 0 1-12 0z"/><path d="M12 17v4"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7.5L3.5 12 8 16.5M16 7.5l4.5 4.5-4.5 4.5M13.5 5l-3 14"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-analysis" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7.5"/><path d="M20.5 20.5l-4-4"/><path d="M8 13.5v-2M11 13.5V8.5M14 13.5v-3.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c.8-4 3.7-6.5 7.5-6.5s6.7 2.5 7.5 6.5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M3 9.5h18M9.5 9.5V21"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h14l-3.5-3.5M20 16H6l3.5 3.5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.4"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 10.5v3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M8 15.5l3.5-4 3 2.5L20 8"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+    <symbol id="i-inbox" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2.5-7.5A2 2 0 0 1 7.4 4h9.2a2 2 0 0 1 1.9 1.5L21 13v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 13h5l1.5 2.5h5L16 13h5"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12l15-7.5-5.5 15-2.5-5.5z"/><path d="M11.5 14l8-9.5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v18M4.5 3v5a2.5 2.5 0 0 0 5 0V3"/><path d="M17 21V3c-2.2 1.2-3.5 3.6-3.5 7v3.5H17"/></symbol>
+    <symbol id="i-forward" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-7 7"/><path d="M9.2 4.5H5.5A1.5 1.5 0 0 0 4 6.1c.7 7.6 6.3 13.2 13.9 13.9a1.5 1.5 0 0 0 1.6-1.5v-2.2a1.5 1.5 0 0 0-1.1-1.4l-2.6-.8a1.5 1.5 0 0 0-1.5.4l-.9.9a11 11 0 0 1-4.9-4.9l.9-.9a1.5 1.5 0 0 0 .4-1.5z"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 4.3L2.8 17.5A2 2 0 0 0 4.5 20.5h15a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0z"/><path d="M12 9.5v4.5M12 17.2v.3"/></symbol>
+    <symbol id="i-web" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 8.5h18M6.5 6.3v0M9 6.3v0"/></symbol>
+  </defs>
+</svg>
+
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="site-header is-static" id="top">
+    <div class="container header-bar">
+      <a class="brand" href="../" aria-label="REEB STUDIO, torna alla home">
+        <img class="brand-mark" src="../assets/brand/mark.svg" width="36" height="36" alt="">
+        <span class="brand-name">REEB <span>STUDIO</span></span>
+      </a>
+      <nav class="nav" aria-label="Menu principale">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel">
+          <span></span><span class="sr-only">Apri il menu</span>
+        </button>
+        <div class="nav-panel" id="nav-panel">
+          <ul class="nav-links" role="list">
+            <li><a href="../#servizi">Servizi</a></li>
+            <li><a href="../#soluzioni">Soluzioni</a></li>
+            <li><a href="../#metodo">Metodo</a></li>
+            <li><a href="../phonetic-ai/" aria-current="page">Phonetic AI</a></li>
+            <li><a href="../#app">App</a></li>
+          </ul>
+          <a class="btn btn-gold btn-sm nav-cta" href="../#contatti">Parliamo del progetto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="subnav">
+    <div class="container subnav-bar">
+      <a class="subnav-name" href="#contenuto"><span class="wave"><svg aria-hidden="true"><use href="#i-wave"/></svg></span>Phonetic <em>AI</em></a>
+      <nav aria-label="Sezioni di Phonetic AI">
+        <ul class="subnav-links" role="list">
+          <li><a href="#come-funziona">Come funziona</a></li>
+          <li><a href="#gestionale">Gestionale</a></li>
+          <li><a href="#lingue">Lingue</a></li>
+          <li><a href="#attivazione">Attivazione</a></li>
+          <li><a href="#domande">Domande</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-dark btn-sm" href="#demo">Prova la demo</a>
+    </div>
+  </div>
+
+  <main id="contenuto">
+
+    <!-- ============ Hero ============ -->
+    <section class="p-hero dark grain" aria-labelledby="hero-title">
+      <div class="grid-lines" aria-hidden="true"></div>
+      <div class="container p-hero-grid">
+        <div>
+          <p class="product-logo"><span class="wave"><svg aria-hidden="true"><use href="#i-wave"/></svg></span>Phonetic <em>AI</em></p>
+          <h1 id="hero-title">Chi ti chiama è già <span class="accent">un tuo ospite</span>.</h1>
+          <p class="lead">Phonetic AI è il centralino con intelligenza artificiale per ristoranti. Risponde al telefono a qualsiasi ora, verifica i tavoli liberi e salva la prenotazione nel gestionale di sala: con cortesia, in italiano e nella lingua dei tuoi clienti.</p>
+          <div class="actions">
+            <a class="btn btn-gold btn-tall" href="tel:+3905831706764"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="demo-number"><small>Chiama la demo</small>0583 1706764</span></a>
+            <a class="btn btn-ghost btn-tall" href="../?richiesta=phonetic-ai#contatti">Richiedi una proposta</a>
+          </div>
+          <ul class="facts" role="list">
+            <li><svg aria-hidden="true"><use href="#i-clock"/></svg>Attivo 24 ore su 24</li>
+            <li><svg aria-hidden="true"><use href="#i-forward"/></svg>Tieni il tuo numero</li>
+            <li><svg aria-hidden="true"><use href="#i-globe"/></svg>Parla più lingue</li>
+          </ul>
+        </div>
+
+        <figure class="p-hero-visual">
+          <img class="p-photo" src="../assets/img/cameriere.webp" width="836" height="1100" alt="Un cameriere sorridente porta due piatti in sala." fetchpriority="high">
+          <figcaption class="call-card">
+            <div class="call-card-head">
+              <div><small>Telefonata d’esempio</small><b>Trattoria da Beppe</b></div>
+              <span class="live">01:12</span>
+            </div>
+            <ol class="transcript" role="list">
+              <li class="c"><b>Cliente</b>Buonasera, c’è un tavolo per sei sabato alle otto e mezza?</li>
+              <li class="a"><b>Phonetic AI</b>Alle otto e mezza ho posto fuori. Se preferisce stare dentro, ho un tavolo alle nove e un quarto.</li>
+              <li class="c"><b>Cliente</b>Va bene fuori, a nome Rossi.</li>
+            </ol>
+            <dl class="booking">
+              <div><dt>Giorno</dt><dd>Sabato</dd></div>
+              <div><dt>Ora</dt><dd>20:30</dd></div>
+              <div><dt>Nome</dt><dd>Rossi</dd></div>
+              <div><dt>Coperti</dt><dd>6</dd></div>
+            </dl>
+            <p class="booked"><svg aria-hidden="true"><use href="#i-check-circle"/></svg>Tavolo esterno assegnato e prenotazione salvata</p>
+            <p class="fine">Locale e cliente inventati.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ Introduzione ============ -->
+    <section class="section" aria-labelledby="intro-title">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Pensato per i ristoratori</p>
+          <h2 id="intro-title">Una prenotazione naturale, <span class="accent">cordiale e affidabile</span>.</h2>
+        </div>
+        <div class="body reveal">
+          <p>Affidare il telefono del ristorante a un assistente digitale è una scelta delicata. Chi chiama spesso è un cliente affezionato, che si fida della cura che metti ogni giorno nel tuo lavoro e vuole sapere che il suo tavolo è in buone mani. Per questo abbiamo progettato Phonetic AI perché ogni telefonata sia <strong>naturale, calda e precisa</strong>.</p>
+          <p>Capisce quando il cliente cambia idea («Siamo in sei… anzi, sette»), risponde alle domande sul locale e conferma il tavolo solo quando c’è davvero posto. E non è solo un centralino: il suo motore AI <strong>organizza la sala</strong>, assegna i tavoli e unisce le tavolate per accogliere più ospiti.</p>
+          <p>A te resta il lavoro che ami: far vivere ai clienti la migliore esperienza possibile.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Il problema ============ -->
+    <section class="section bg-paper-2" aria-labelledby="problema-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Il problema</p>
+          <h2 id="problema-title">Il telefono squilla <span class="accent">proprio quando</span> hai da fare.</h2>
+        </div>
+        <ul class="moments" role="list">
+          <li class="moment reveal">
+            <img src="../assets/img/sala-servizio.webp" width="1000" height="666" alt="Una sala piena di clienti, con una cameriera tra i tavoli." loading="lazy">
+            <div>
+              <p class="tag"><svg aria-hidden="true"><use href="#i-utensils"/></svg>Durante il servizio</p>
+              <h3>Due piatti in mano, il telefono che suona</h3>
+              <p>Sei tra sala e cucina e chi vuole prenotare resta in attesa, o richiama altrove.</p>
+            </div>
+          </li>
+          <li class="moment reveal" style="--d:.08s">
+            <img src="../assets/img/sala-vuota.webp" width="800" height="1200" alt="Tavoli apparecchiati in una sala vuota." loading="lazy">
+            <div>
+              <p class="tag"><svg aria-hidden="true"><use href="#i-moon"/></svg>A locale chiuso</p>
+              <h3>Chiamate che nessuno può prendere</h3>
+              <p>C’è chi chiama dopo il servizio o nel giorno di riposo, quando al ristorante non c’è nessuno.</p>
+            </div>
+          </li>
+          <li class="moment reveal" style="--d:.16s">
+            <img src="../assets/img/cena-allaperto.webp" width="1100" height="880" alt="Persone a cena ai tavoli all’aperto davanti a un ristorante, di sera." loading="lazy">
+            <div>
+              <p class="tag"><svg aria-hidden="true"><use href="#i-globe"/></svg>Con i turisti</p>
+              <h3>Lingue diverse, prenotazioni sbagliate</h3>
+              <p>Basta poco per capirsi male su giorno, ora e numero di persone.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Come funziona ============ -->
+    <section class="section" id="come-funziona" aria-labelledby="funziona-title">
+      <div class="container">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="eyebrow">Come funziona</p>
+            <h2 id="funziona-title">Risponde, controlla i tavoli e <span class="accent">prende la prenotazione</span>.</h2>
+          </div>
+          <p class="lead">«Sabato sera, siamo in sei.» Il cliente parla come parlerebbe con te. Phonetic AI raccoglie giorno, ora, nome e numero di persone. La voce con cui risponde la scegli tu.</p>
+        </div>
+        <ul class="features" role="list">
+          <li class="feature reveal">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
+            <h3>Sempre disponibile</h3>
+            <p>Risponde a qualsiasi ora, anche quando il locale è chiuso o durante il servizio.</p>
+          </li>
+          <li class="feature reveal" style="--d:.06s">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-check-circle"/></svg></span>
+            <h3>Conferma sicura</h3>
+            <p>Controlla che ci sia posto, salva la prenotazione e solo allora dà conferma al cliente.</p>
+          </li>
+          <li class="feature reveal" style="--d:.12s">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span>
+            <h3>Alternative</h3>
+            <p>Se è pieno propone un’altra ora, un altro giorno o un’altra sala. Prenota solo se il cliente accetta.</p>
+          </li>
+          <li class="feature reveal">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-swap"/></svg></span>
+            <h3>Modifiche e disdette</h3>
+            <p>Riconosce dal numero chi ha già prenotato e può spostare o cancellare la prenotazione.</p>
+          </li>
+          <li class="feature reveal" style="--d:.06s">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-info"/></svg></span>
+            <h3>Informazioni sul locale</h3>
+            <p>Risponde alle domande su menu, orari, chiusure e indicazioni per arrivare.</p>
+          </li>
+          <li class="feature reveal" style="--d:.12s">
+            <span class="icon-box"><svg aria-hidden="true"><use href="#i-bell"/></svg></span>
+            <h3>Richiamate</h3>
+            <p>Se un cliente chiede di parlare con te, ti lascia un promemoria per richiamarlo.</p>
+          </li>
+        </ul>
+        <div class="callout reveal">
+          <svg aria-hidden="true"><use href="#i-alert"/></svg>
+          <p><b>Allergie e allergeni.</b> Queste domande passano sempre a te, così puoi rispondere di persona.</p>
+          <a class="btn btn-dark btn-sm" href="#demo">Prova la demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Gestionale ============ -->
+    <section class="section dark grain" id="gestionale" aria-labelledby="gestionale-title">
+      <div class="container">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="eyebrow">Gestionale di sala</p>
+            <h2 id="gestionale-title">La tua sala, <span class="accent">tavolo per tavolo</span>.</h2>
+          </div>
+          <p class="lead">Dal telefono o dal computer apri la piantina del tuo locale, con sale interne ed esterne, tavoli, porte e finestre. Le prenotazioni arrivano già organizzate.</p>
+        </div>
+        <div class="room-grid">
+          <figure class="screen reveal">
+            <div class="screen-frame">
+              <div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i><span>Phonetic AI · Sala principale</span></div>
+              <img src="../assets/img/phonetic-gestionale.webp" width="1684" height="1264" alt="Piantina del gestionale con tavoli liberi e prenotati. Per ogni prenotazione si leggono nome, coperti e orario." loading="lazy">
+            </div>
+            <figcaption>I Bianchi hanno prenotato per otto: in questo esempio il gestionale ha unito i tavoli 7 e 8.</figcaption>
+          </figure>
+          <ul class="spec-list" role="list">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Tavoli</b><span>A ogni prenotazione assegna automaticamente un tavolo.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Tavolate</b><span>Quando serve, unisce i tavoli e aggiunge le prolunghe.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Passaggi</b><span>Lascia spazio per le sedie e per passare. Tiene separati i tavoli che gli indichi.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Gruppi</b><span>Se una tavolata non basta, divide il gruppo su tavolate vicine, nella stessa sala.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Doppi turni</b><span>Comunica entro che ora va liberato il tavolo e prenota se il cliente è d’accordo.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Controlli</b><span>Prima di salvare verifica le prenotazioni già confermate: ogni tavolo va a una sola compagnia per volta.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Interventi a mano</b><span>Aggiungi le tue prenotazioni e chi arriva senza aver chiamato, blocca i tavoli col lucchetto, annulla o ripristina ogni modifica.</span></div></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Menu e orari</b><span>Li inserisci una volta sola: Phonetic AI li usa quando risponde al telefono.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Lingue ============ -->
+    <section class="section" id="lingue" aria-labelledby="lingue-title">
+      <div class="container split" style="align-items: center">
+        <div>
+          <p class="eyebrow">Multilingue</p>
+          <h2 id="lingue-title">Anche chi è in vacanza prenota <span class="accent">nella sua lingua</span>.</h2>
+          <p class="lead" style="margin-top: var(--s5)">Se un cliente chiama in tedesco, Phonetic AI risponde in tedesco e prende la prenotazione. Tu la ritrovi nell’elenco di sempre, insieme alle altre. In città d’arte, al mare o in montagna, chi è di passaggio può chiamare come farebbe a casa.</p>
+        </div>
+        <div class="lang-card reveal">
+          <img src="../assets/img/tavolata.webp" width="1200" height="813" alt="" loading="lazy">
+          <ul class="greetings" role="list">
+            <li lang="it"><small>IT</small><span>Buonasera</span></li>
+            <li lang="en"><small>EN</small><span>Good evening</span></li>
+            <li lang="de"><small>DE</small><span>Guten Abend</span></li>
+            <li lang="fr"><small>FR</small><span>Bonsoir</span></li>
+            <li lang="es"><small>ES</small><span>Buenas noches</span></li>
+            <li lang="nl"><small>NL</small><span>Goedenavond</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Demo ============ -->
+    <section class="section dark deep grain" id="demo" aria-labelledby="demo-title">
+      <div class="container demo-grid">
+        <div>
+          <p class="eyebrow">Demo</p>
+          <h2 id="demo-title">Provalo adesso, <span class="accent">come farebbe un tuo cliente</span>.</h2>
+          <p class="lead" style="margin-top: var(--s5)">Chiama il numero della demo e simula una prenotazione: chiedi un tavolo, cambia idea, fai una domanda sul locale.</p>
+        </div>
+        <div class="demo-card">
+          <small>Numero della demo</small>
+          <span class="number">0583 1706764</span>
+          <a class="btn btn-gold" href="tel:+3905831706764"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama la demo</a>
+
+          <form class="greeting-form" id="greeting-form" novalidate>
+            <label for="nome-locale">Anteprima del saluto con il nome del tuo locale</label>
+            <div class="inline-field">
+              <input type="text" id="nome-locale" placeholder="Es. Osteria del Borgo" autocomplete="organization" aria-describedby="greeting-err" maxlength="120" required>
+              <button class="btn btn-ghost" type="submit">Mostra il saluto</button>
+            </div>
+            <p class="field-error" id="greeting-err" role="alert"></p>
+            <p class="greeting-out" id="greeting-out" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Attivazione ============ -->
+    <section class="section" id="attivazione" aria-labelledby="attivazione-title">
+      <div class="container activation">
+        <img class="reveal" src="../assets/img/tavola-apparecchiata.webp" width="1000" height="1333" alt="Una tavola apparecchiata con tovaglia bianca e bicchieri da vino." loading="lazy">
+        <div>
+          <p class="eyebrow">Attivazione</p>
+          <h2 id="attivazione-title">Tre passaggi. E <span class="accent">tieni il tuo numero</span>.</h2>
+          <p class="lead">I clienti continuano a chiamare il numero che hanno già salvato.</p>
+          <ol class="steps" role="list">
+            <li class="step">
+              <div><h3>Prepariamo la piantina</h3><p>Inseriamo noi sale, tavoli, orari e menu del tuo locale. Apri il gestionale dal telefono o dal computer, direttamente nel browser.</p></div>
+            </li>
+            <li class="step">
+              <div><h3>Attivi la deviazione</h3><p>Dal telefono del ristorante imposti la deviazione delle chiamate verso Phonetic AI.</p></div>
+            </li>
+            <li class="step">
+              <div><h3>Decidi tu quando usarlo</h3><p>Con la deviazione attiva risponde Phonetic AI. Quando vuoi rispondere tu, la disattivi.</p></div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Domande ============ -->
+    <section class="section bg-paper-2" id="domande" aria-labelledby="domande-title">
+      <div class="container faq-grid">
+        <div>
+          <p class="eyebrow">Domande frequenti</p>
+          <h2 id="domande-title">Tutto quello che ci chiedono i ristoratori.</h2>
+          <p class="lead">Non trovi la risposta? <a href="../?richiesta=phonetic-ai#contatti">Scrivici</a>.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>E se sbaglia?</summary>
+            <p>Puoi aprire le prenotazioni, controllarle e correggerle a mano. Prima di confermare un tavolo, Phonetic AI verifica che ci sia posto e salva la prenotazione.</p>
+          </details>
+          <details>
+            <summary>E se un cliente vuole parlare con me?</summary>
+            <p>Phonetic AI ti lascia un promemoria con la richiesta, così sai chi richiamare.</p>
+          </details>
+          <details>
+            <summary>Devo essere pratico di computer?</summary>
+            <p>No. La piantina la prepariamo noi. A te basta aprire il gestionale per vedere la sala e le prenotazioni, anche dal telefono.</p>
+          </details>
+          <details>
+            <summary>Devo cambiare numero?</summary>
+            <p>No, tieni il tuo numero. Quando vuoi far rispondere Phonetic AI attivi la deviazione, e la togli quando vuoi.</p>
+          </details>
+          <details>
+            <summary>Come risponde alle domande sulle allergie?</summary>
+            <p>Le domande su allergie e allergeni passano a te, così puoi rispondere di persona.</p>
+          </details>
+          <details>
+            <summary>Posso continuare a prendere prenotazioni io?</summary>
+            <p>Sì. Le inserisci nello stesso elenco di quelle prese da Phonetic AI. Puoi segnare anche chi arriva senza prenotazione.</p>
+          </details>
+          <details>
+            <summary>Prende anche ordini da asporto?</summary>
+            <p>No, si occupa delle prenotazioni dei tavoli per pranzo e cena.</p>
+          </details>
+          <details>
+            <summary>E se non c’è posto all’ora richiesta?</summary>
+            <p>Propone un altro orario, un altro giorno o un’altra sala. Prenota solo se al cliente va bene.</p>
+          </details>
+          <details>
+            <summary>Posso usarlo con i doppi turni?</summary>
+            <p>Sì. Dice al cliente entro che ora deve lasciare il tavolo e prende la prenotazione se il cliente accetta.</p>
+          </details>
+          <details>
+            <summary>Il cliente può spostare o cancellare una prenotazione?</summary>
+            <p>Sì. Quando richiama, Phonetic AI lo riconosce dal numero e può modificare o cancellare la prenotazione.</p>
+          </details>
+          <details>
+            <summary>Quanto costa?</summary>
+            <p>Ci racconti com’è il tuo locale e ti prepariamo una proposta su misura.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Chiusura ============ -->
+    <section class="section dark cta-photo" aria-labelledby="cta-title">
+      <img src="../assets/img/cucina.webp" width="1400" height="933" alt="" loading="lazy">
+      <div class="container">
+        <p class="eyebrow">Inizia ora</p>
+        <h2 id="cta-title">Vuoi Phonetic AI <span class="accent">nel tuo ristorante</span>?</h2>
+        <p class="lead">Parliamo del tuo locale e di come prendi oggi le prenotazioni. Ti prepariamo una proposta su misura.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="../?richiesta=phonetic-ai#contatti">Richiedi una proposta <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="tel:+3905831706764"><svg aria-hidden="true"><use href="#i-phone"/></svg>0583 1706764</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="../" aria-label="REEB STUDIO, torna alla home">
+            <img class="brand-mark" src="../assets/brand/mark.svg" width="36" height="36" alt="">
+            <span class="brand-name">REEB <span>STUDIO</span></span>
+          </a>
+          <p>Soluzioni di intelligenza artificiale per le aziende: automazione dei processi, assistenti AI, integrazioni, software e app su misura.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Società</h2>
+          <ul role="list">
+            <li><a href="../#servizi">Servizi</a></li>
+            <li><a href="../#soluzioni">Soluzioni</a></li>
+            <li><a href="../#metodo">Metodo</a></li>
+            <li><a href="../#contatti">Contatti</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Prodotti</h2>
+          <ul role="list">
+            <li><a href="../phonetic-ai/">Phonetic AI</a></li>
+            <li><a href="tel:+3905831706764">Demo telefonica</a></li>
+            <li><a href="../#app">App mobile</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Informazioni</h2>
+          <ul role="list">
+            <li><a href="mailto:info@reebstudio.com">info@reebstudio.com</a></li>
+            <li><a href="../note-legali/#privacy">Privacy</a></li>
+            <li><a href="../note-legali/#cookie">Cookie</a></li>
+            <li><a href="../note-legali/#crediti">Crediti</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <!-- Quando la società sarà registrata, aggiungere qui: ragione sociale completa, sede legale, P.IVA (obbligatoria per legge sul sito). -->
+        <span>&copy; <span data-year>2026</span> REEB STUDIO. Tutti i diritti riservati.</span>
+        <span>Fotografie dei ristoranti: Unsplash</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js" defer></script>
+  <script src="../assets/js/phonetic.js" defer></script>
+</body>
+</html>
