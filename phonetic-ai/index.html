@@ -337,14 +337,22 @@
           <span class="number">0583 1706764</span>
           <a class="btn btn-gold" href="tel:+3905831706764"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama la demo</a>
 
-          <form class="greeting-form" id="greeting-form" novalidate>
-            <label for="nome-locale">Anteprima del saluto con il nome del tuo locale</label>
-            <div class="inline-field">
-              <input type="text" id="nome-locale" placeholder="Es. Osteria del Borgo" autocomplete="organization" aria-describedby="greeting-err" maxlength="120" required>
-              <button class="btn btn-ghost" type="submit">Mostra il saluto</button>
+          <form class="greeting-form" id="greeting-form" data-endpoint="https://prova-doppi-turni-production.up.railway.app/telefono/demo-saluto" novalidate>
+            <label for="nome-locale">Nome del tuo locale</label>
+            <div class="inline-field" style="grid-template-columns:minmax(0,1fr);margin-bottom:var(--s3)">
+              <input type="text" id="nome-locale" placeholder="Es. Osteria del Borgo" autocomplete="organization" aria-describedby="greeting-err" maxlength="80" required>
             </div>
+            <label for="telefono-demo">Numero da cui chiamerai</label>
+            <div class="inline-field">
+              <input type="tel" id="telefono-demo" placeholder="Es. +39 333 123 4567" autocomplete="tel" aria-describedby="demo-istruzioni greeting-err" maxlength="32" required>
+              <button class="btn btn-ghost" type="submit">Prepara la chiamata</button>
+            </div>
+            <p id="demo-istruzioni" class="fine">Per sentire il nome del tuo locale, chiama dallo stesso numero entro 5 minuti.</p>
             <p class="field-error" id="greeting-err" role="alert"></p>
             <p class="greeting-out" id="greeting-out" aria-live="polite"></p>
+            <div id="demo-personalizzata" hidden>
+              <a class="btn btn-gold" href="tel:+3905831706764"><svg aria-hidden="true"><use href="#i-phone"/></svg>Chiama ora</a>
+            </div>
           </form>
         </div>
       </div>
@@ -491,6 +499,6 @@
   </footer>
 
   <script src="../assets/js/site.js" defer></script>
-  <script src="../assets/js/phonetic.js" defer></script>
+  <script src="../assets/js/phonetic.js?v=saluto-telefonico" defer></script>
 </body>
 </html>
