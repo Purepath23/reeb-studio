@@ -475,15 +475,21 @@ button, input, select, textarea { font: inherit; color: inherit; }
    -------------------------------------------------------------------------- */
 
 .hero {
+  display: flex;
+  align-items: center;
   overflow: hidden;
-  padding-block: clamp(4.5rem, 10vw, 8rem) clamp(4rem, 8vw, 6.5rem);
+  /* L'apertura occupa esattamente la prima schermata */
+  min-height: min(calc(100vh - var(--header-h)), 60rem);
+  min-height: min(calc(100svh - var(--header-h)), 60rem);
+  padding-block: clamp(2.5rem, 6vh, 5rem);
 }
 
 .hero-copy { position: relative; max-width: 40rem; }
 
-.hero h1 { max-width: 13.5ch; }
-.hero .lead { margin-top: var(--s5); }
-.hero .actions { margin-top: var(--s6); }
+.hero h1 { max-width: 13.5ch; font-size: clamp(2.5rem, min(6vw, 8.6vh), 5rem); }
+.hero .pill { margin-bottom: clamp(1rem, 2.5vh, 1.5rem); }
+.hero .lead { margin-top: clamp(1rem, 2.5vh, 1.5rem); }
+.hero .actions { margin-top: clamp(1.25rem, 3.5vh, 2rem); }
 
 .pill {
   display: inline-flex;
@@ -514,8 +520,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   display: flex;
   flex-wrap: wrap;
   gap: var(--s3) var(--s5);
-  margin-top: var(--s7);
-  padding-top: var(--s5);
+  margin-top: clamp(1.5rem, 4.5vh, 3rem);
+  padding-top: clamp(1rem, 2.5vh, 1.5rem);
   border-top: 1px solid var(--line-dark);
   list-style: none;
   color: var(--on-dark-2);
@@ -1606,7 +1612,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .nav-panel .btn { width: 100%; margin-top: var(--s5); }
 
   .problems-grid, .product-feature, .apps, .faq-grid, .contact-grid, .section-head-split { grid-template-columns: minmax(0, 1fr); }
-  .hero { padding-bottom: 58vw; }
+  .hero { display: block; min-height: 0; padding-block: clamp(3rem, 8vw, 4.5rem) 58vw; }
+  .hero h1 { font-size: clamp(2.25rem, 7vw, 3.5rem); }
   .hero-ribbon {
     top: auto;
     bottom: -6vw;
